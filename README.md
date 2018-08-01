@@ -14,12 +14,15 @@ Python 3.6 added async generators, Python 3.7 adds some more tools to make them 
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/async_generator-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/async_generator-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/async_generator-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/async_generator-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/async_generator/badges/version.svg)](https://anaconda.org/conda-forge/async_generator)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/async_generator/badges/downloads.svg)](https://anaconda.org/conda-forge/async_generator)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-async_generator-green.svg)](https://anaconda.org/conda-forge/async_generator) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/async_generator.svg)](https://anaconda.org/conda-forge/async_generator) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/async_generator.svg)](https://anaconda.org/conda-forge/async_generator) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/async_generator.svg)](https://anaconda.org/conda-forge/async_generator) |
 
 Installing async_generator
 ==========================
