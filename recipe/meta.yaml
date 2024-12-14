@@ -1,27 +1,26 @@
 {% set name = "async_generator" %}
 {% set version = "1.10" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "6ebb3d106c12920aaae42ccb6f787ef5eefdcdd166ea3d628fa8476abe712144" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  'sha256': '6ebb3d106c12920aaae42ccb6f787ef5eefdcdd166ea3d628fa8476abe712144'
 
 build:
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
-  build:
-    - python >=3.5
+  host:
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/python-trio/async_generator
